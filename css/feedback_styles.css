@@ -1,0 +1,232 @@
+/* 
+  Purpose: Styles for the feedback.html
+        
+  Author: Lim Yu Her 
+
+  Filename: feedback_styles.css
+*/
+
+
+/* styles for the introduction section */
+.intro {
+  background-color: rgba(246, 247, 212, 0.7);
+}
+
+.intro h1 {
+  font-family: 'Playfair Display', 'Unna', 'Times New Roman', Times, serif;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+
+/* card styles */
+.card p {
+  line-height: 1.5;
+  /* padding: 0.5em 0; */
+}
+
+.card:not(.intro) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* styles for contact info list  */
+ul.contactinfo  {
+  list-style-type: none;
+  margin: auto;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 1rem;
+  color: rgb(246, 247, 212);
+}
+
+ul.contactinfo li.title {
+  color: rgb(232, 235, 147);
+  /* font-family: 'Playfair Display', 'Unna', 'Times New Roman', Times, serif; */
+}
+
+ul.contactinfo li {
+  font-size: 1.5em;
+}
+
+ul.contactinfo a:link {
+  text-decoration: none;
+  color: rgb(246, 247, 212);
+  transition: .2s ease-in-out;
+}
+
+ul.contactinfo a:visited {
+  color:rgba(246, 247, 212, 0.7);
+}
+
+ul.contactinfo a:hover {
+  color: rgb(232, 235, 147);
+  
+}
+
+ul.contactinfo a:active {
+  color: rgba(246, 247, 212, 0.7);
+}
+
+div.iconbackground {
+  /* display: inline-block; */
+  color: rgb(126, 129, 24);
+  background-color: rgba(246, 247, 212, 0.7);
+  margin: auto;
+  width: 50%;
+  border-radius: 4px;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(242, 242, 242, 0.5);
+}
+
+div.iconbackground a:not(:last-of-type) {
+  margin-right: 2em;
+}
+
+div.iconbackground img {
+  margin-top: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/* styles for the form */
+input:not(input[type=submit]):not(input[type=button]), textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  resize: vertical;
+  box-shadow: inset 0.0625rem 0.0625rem 0.25rem 0rem rgba(40, 35, 29, 0.3);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgba(246, 247, 212, 0.7);
+}
+
+label {
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  display: inline-block;
+}
+
+input[type=submit], input[type=button] {
+  background-color: rgb(126, 129, 24);
+  color: rgba(246, 247, 212, 0.9);
+  padding: 0.75rem 1.25rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  float: right;
+  width: 20%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  transition: .5s ease;
+}
+
+input[type=button] {
+  float: left;
+  margin-left: 0;
+}
+
+input[type=submit]:hover, input[type=button]:hover{
+  background-color: rgba(246, 247, 212, 0.7);
+  color: rgb(126, 129, 24);
+  transform: scale(1.05, 1.05);
+}
+
+input:not(input[type=submit]):not(input[type=button]):focus-visible, textarea:focus-visible {
+  outline: none;
+  border: solid 1px Black;
+  transition: border-color .5s ease;
+}
+
+input:not(input[type=submit]):not(input[type=button]):focus:valid, textarea:focus:valid {
+  /* svg file from this link: https://icons.getbootstrap.com/icons/check/ */
+  background: rgb(220, 255, 220) url('../images/check.svg') right bottom/40px 40px no-repeat;
+}
+
+input:not(input[type=submit]):not(input[type=button]):focus:invalid, textarea:focus:invalid {
+  /* svg file from this link: https://icons.getbootstrap.com/icons/exclamation/ */
+  background: rgb(255, 232, 233) url('../images/exclamation.svg') right bottom/40px 40px no-repeat;
+}
+
+textarea#message {
+  height: 12.5rem;
+}
+
+.container {
+  border-radius: 0.3125rem;
+  background-color: rgba(246, 247, 212, 0.7);
+  padding: 1.25rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(242, 242, 242, 0.5);
+}
+
+.container h2 {
+  font-family: 'Playfair Display', 'Unna', 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  padding-bottom: 1rem;
+}
+
+.container p {
+  padding-bottom: 1rem;
+}
+
+div.requiredmsg p {
+  padding-bottom: 0;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+div.btn {
+  margin-top: 1rem;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 0.375rem;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 0.375rem;
+}
+
+
+/* Responsive layout - when the screen is less than 750px wide */
+@media screen and (max-width: 750px) {
+
+  .col-25, .col-75, input[type=submit], input[type=button] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  input[type=button] {
+    margin-top: 1rem;
+  }
+
+  .container h2 {
+    text-align: center;
+  }
+
+  div.iconbackground {
+    color: rgb(126, 129, 24);
+    background-color: rgba(246, 247, 212, 0.7);
+    margin: auto;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  div.iconbackground a:not(:last-of-type) {
+    margin-right: 1.5em;
+  }
+
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+      Purpose: This web page will provide information about the available outdoor events.
+
+      Author: Lim Yu Her 
+
+      Filename: outdoor_events.html
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Events</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/outdoor_styles.css" rel="stylesheet">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/playpause.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="home.html"><img src="images/resort_logo.png" alt="logo" class="logoimg" width="1600" height="900"></a>
+
+  </header>
+
+  <nav class="topnav">
+    
+    <li class="nav-button">
+      <a id="navicon" href="javascript:void(0)" onclick="navButton()"><img src="images/navicon.png" alt="navigation icon"></a>
+      <!-- This is the main navigation -->
+      <ul id="submenu" class="normal">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="camping_site.html">Camping</a></li>
+        <li><a href="#">Transportation</a></li>
+        <li><a href="outdoor_events.html" class="active">Outdoor Events</a></li>
+        <li><a href="courage_events.html">Tests Of Courage</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html" >Feedback</a></li>
+      </ul>
+    </li>
+
+    <!-- These navigation buttons are only displayed in small screen sizes -->
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/house-fill/ -->
+    <a href="home.html" id="home" title="Home"><img src="images/home_icon.svg" alt="Home" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/journal-plus/ -->
+    <a href="reservations.html" id="reservations" title="Reservations"><img src="images/reservations_icon.svg" alt="Reservations" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://freesvg.org/restaurant-sign-vector-image9339 -->
+    <a href="catering.html" id="catering" title="Catering"><img src="images/catering_icon.svg" alt="Catering" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/telephone-plus-fill/ -->
+    <a href="feedback.html" id="feedback" title="Contact Us"><img src="images/feedback_icon.svg" alt="Contact Us" title="Contact Us" width="30" height="30"></a>
+
+  </nav>
+
+  <!-- play/pause button -->
+  <div class="row">
+    <button class="playpause" onclick="playPause()">
+      <div class="playpausebtn">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/pause-fill/ -->
+        <img class="pause-btn" src="images/pause-fill.svg" alt="Back" width="30" height="40">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/play-fill/ -->
+        <img class="play-btn" src="images/play-fill.svg" alt="Back" width="30" height="40">
+        <p id="music">Music</p>
+      </div>
+      <audio id="audio1" loop>
+        <source src="audio/test.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+    </button>
+  </div>
+
+  <div class="row">
+    <article class="card intro">
+
+      <h1>Outdoor Events</h1>
+      <p>The <strong>Mont’que laBrise</strong> mountain resort provides a <em>multitude</em> of outdoor events that can be experienced during the day or the night!</p>
+
+    </article>
+  </div>
+
+  <div class="row activities">
+    <div class="daytime">
+
+      <h2>Daytime Activities</h2>
+      <p>Not much of a night owl? Take a look at our exciting daytime activities!</p>
+
+      <div class="leftcolumn card">
+        <h3>Hiking</h3>
+        <div class="container"> <!--container used for the overlay effect-->
+          <!-- photo from unsplash url: https://unsplash.com/photos/xOigCUcFdA8 -->
+          <a href="daytime_activities.html#hiking">
+            <img src="images/hiking.jpg" alt="People hiking with the sun rising in the background" width="1600" height="900">
+            <div class="overlay">Click for More Details</div>
+          </a>
+        </div>
+        <p>Want to enjoy the mountain breeze and the morning fresh air? Join our morning hiking activity!</p>
+        <p class="moredetails">Click on the image for more details!</p>
+      </div>
+
+      <div class="rightcolumn card">
+        <h3>ATV</h3>
+        <div class="container"> <!--container used for the overlay effect-->
+          <!-- photo from unsplash, url: https://unsplash.com/photos/V-shjVYbphI -->
+          <a href="daytime_activities.html#atv">
+            <img src="images/atv.jpg" alt="Two people riding an ATV" width="1600" height="900">
+            <div class="overlay">Click for More Details</div>
+          </a>
+        </div>
+        <p>Don’t feel like hiking? Want to enjoy a thrilling experience? Join our <em>Off-Road Madness ATV ride</em>!</p>
+        <p class="moredetails">Click on the image for more details!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row activities">
+    <div class="nighttime">
+
+      <h2>Nighttime Activities</h2>
+      <p>Prefer to sleep in during your vacation? Well, worry not as we have equally as exciting nighttime activities to experience!</p>
+
+      <div class="leftcolumn card">
+        <h3>Night Jungle Trekking</h3>
+        <div class="container"> <!--container used for the overlay effect-->
+          <!-- photo from unsplash, edited, url: https://unsplash.com/photos/UjxL9x0nwQ8 -->
+          <a href="nighttime_activities.html#trekking">
+            <img src="images/trekking.jpg" alt="A group of people going on Night Jungle Trekking" width="1600" height="900">
+            <div class="overlay">Click for More Details</div>
+          </a>
+        </div>
+        <p>Want to experience nature at night? Join our Night Jungle Trekking!</p>
+        <p class="moredetails">Click on the image for more details!</p>
+      </div>
+
+      <div class="rightcolumn card">
+        <h3>Firefly Viewing</h3>
+        <div class="container"> <!--container used for the overlay effect-->
+          <!-- photo from unsplash, url: https://unsplash.com/photos/lH40asdVljs -->
+          <a href="nighttime_activities.html#firefly">
+            <img src="images/firefly.jpg" alt="A view of fireflies" width="1600" height="900">
+            <div class="overlay">Click for More Details</div>
+          </a>
+        </div>
+        <p>Want a chilling experience for the night? Join our Firefly Viewing session!</p>
+        <p class="moredetails">Click on the image for more details!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+
+    <h2>copyright &#169 <span style="font-variant: normal">Mont’que laBrise Mountain Resort</span></h2>
+    <p>Location : Titiwangsa Mountains,Malaysia</p>
+    <p>email : &#9993; <a href="mailto:montquelabrise@gmail.com" id="email">montquelabrise@gmail.com</a></p>
+    <p>Phone: &#128383; <a href="tel:+60322354488">+603 2235 4488</a></p>
+    <p><a href="feedback.html">Contact Us</a><span> || </span><a href="policy.html">Privacy Policy</a> </p>
+    <p class="icon">
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/facebook/ -->
+      <a href="https://www.facebook.com/montquelabrise" target="_blank"><img src="images/facebook.svg" alt="Facebook"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/twitter/ -->
+      <a href="https://twitter.com/montquelabrise" target="_blank"><img src="images/twitter.svg" alt="Twitter"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/youtube/ -->
+      <a href="https://www.youtube.com/montquelabrise" target="_blank"><img src="images/youtube.svg" alt="YouTube"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/instagram/ -->
+      <a href="https://www.instagram.com/montquelabrise/" target="_blank"><img src="images/instagram.svg" alt="Instagram"  width="20" height="20"></a>
+    </p>
+
+  </footer>
+
+</body>
+</html>

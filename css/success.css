@@ -1,0 +1,45 @@
+/* 
+  Purpose: Styles for the success.html
+
+  Filename: success.css
+*/
+
+
+/* basic styles for the success text */
+.card {
+  padding: 10rem 0;
+}
+
+.card h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.card p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+/* home button styles */
+.homebtn {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5em .8em;
+  margin-top: 1em;
+  background-color: #04754c;
+  color: white;
+  border-radius: 0.25rem;
+  transition: .5s ease;
+}
+
+a.homebtn:hover {
+  background-color: rgb(192, 255, 192);
+  color: #04754c;
+  font-weight: bold;
+  transform: scale(1.2, 1.2);
+}
+
+div.container {
+  text-align: center;
+}

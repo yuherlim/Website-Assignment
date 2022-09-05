@@ -1,0 +1,136 @@
+/* 
+  Purpose: Styles for the outdoor_events.html
+        
+  Author: Lim Yu Her 
+
+  Filename: outdoor_styles.css
+*/
+
+
+/* styles for the introduction section */
+.intro {
+  background-color: rgba(246, 247, 212, 0.7);
+}
+
+.intro h1 {
+  font-family: 'Playfair Display', 'Unna', 'Times New Roman', Times, serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.intro p {
+  padding: 1em 0;
+}
+
+
+/* Create two equal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 49%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 49%;
+  margin-left: 2%;
+}
+
+
+/* card styles */
+.card p {
+  line-height: 1.5;
+}
+
+/* Card hover styles */
+.activities .card:hover {
+  /* box-shadow: 0 0 2px 2px rgb(0, 0, 0); */
+  position: relative;
+  border-style: none;
+  box-shadow: 0 0 0.5rem 0.3rem rgba(255, 255, 255, 0.5);
+}
+
+/* styles for images inside cards*/
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin: 2% 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* overlay on the images */
+.container {
+  position: relative;
+  max-width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: White;
+  font-size: 1.25em;
+  padding: 1.25em;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/* styles for rows with activities class */
+.activities h2 {
+  font-family: 'Playfair Display', 'Unna', 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+.activities h3 {
+  font-size: 1.17em;
+}
+
+/* daytime and nighttime activities styles */
+div.daytime, div.nighttime {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.daytime > p, .nighttime > p , .daytime > h2, .nighttime > h2 {
+  margin-top: 0.5rem;
+  color: rgb(246, 247, 212);
+}
+
+.moredetails {
+  margin-top: 1rem;
+}
+
+/* Clear floats after the columns inside nighttime and daytime*/
+.daytime::after, .nighttime::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 1rem;
+    margin-left: 0;
+  }
+  .card h3, .activities h2 {
+    text-align: center;
+  }
+  
+}

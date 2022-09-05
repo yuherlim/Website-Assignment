@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+      Purpose: This web page will be shown if user form input is successfully received by the server.
+
+      Filename: success.html
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Page</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/success.css" rel="stylesheet">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/playpause.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="home.html"><img src="images/resort_logo.png" alt="logo" class="logoimg" width="1600" height="900"></a>
+
+  </header>
+
+  <nav class="topnav">
+    
+    <li class="nav-button">
+      <a id="navicon" href="javascript:void(0)" onclick="navButton()"><img src="images/navicon.png" alt="navigation icon"></a>
+      <!-- This is the main navigation -->
+      <ul id="submenu" class="normal">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">Camping</a></li>
+        <li><a href="#">Transportation</a></li>
+        <li><a href="outdoor_events.html">Outdoor Events</a></li>
+        <li><a href="#">Tests Of Courage</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Catering</a></li>
+        <li><a href="webassignmenty1s1code/faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </li>
+
+    <!-- These navigation buttons are only displayed in small screen sizes -->
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/house-fill/ -->
+    <a href="home.html" id="home" title="Home"><img src="images/home_icon.svg" alt="Home" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/journal-plus/ -->
+    <a href="reservations.html" id="reservations" title="Reservations"><img src="images/reservations_icon.svg" alt="Reservations" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://freesvg.org/restaurant-sign-vector-image9339 -->
+    <a href="catering.html" id="catering" title="Catering"><img src="images/catering_icon.svg" alt="Catering" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/telephone-plus-fill/ -->
+    <a href="feedback.html" id="feedback" title="Contact Us"><img src="images/feedback_icon.svg" alt="Contact Us" title="Contact Us" width="30" height="30"></a>
+
+  </nav>
+
+  <!-- play/pause button -->
+  <div class="row">
+    <button class="playpause" onclick="playPause()">
+      <div class="playpausebtn">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/pause-fill/ -->
+        <img class="pause-btn" src="images/pause-fill.svg" alt="Back" width="30" height="40">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/play-fill/ -->
+        <img class="play-btn" src="images/play-fill.svg" alt="Back" width="30" height="40">
+        <p id="music">Music</p>
+      </div>
+      <audio id="audio1" loop>
+        <source src="audio/test.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+    </button>
+  </div>
+
+  <div class="row">
+
+      <div class="card">
+          <h1>Success</h1>
+          <p>Your input has been successfully received.</p>
+          <div class="container">
+            <a href="home.html" class="homebtn">Go Back Home</a>
+          </div>
+      </div>
+      
+  </div>
+
+  <footer>
+
+    <h2>copyright &#169 <span style="font-variant: normal">Mont’que laBrise Mountain Resort</span></h2>
+    <p>Location : Titiwangsa Mountains,Malaysia</p>
+    <p>email : &#9993; <a href="mailto:montquelabrise@gmail.com" id="email">montquelabrise@gmail.com</a></p>
+    <p>Phone: &#128383; <a href="tel:+60322354488">+603 2235 4488</a></p>
+    <p><a href="feedback.html">Contact Us</a><span> || </span><a href="policy.html">Privacy Policy</a> </p>
+    <p class="icon">
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/facebook/ -->
+      <a href="https://www.facebook.com/montquelabrise" target="_blank"><img src="images/facebook.svg" alt="Facebook"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/twitter/ -->
+      <a href="https://twitter.com/montquelabrise" target="_blank"><img src="images/twitter.svg" alt="Twitter"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/youtube/ -->
+      <a href="https://www.youtube.com/montquelabrise" target="_blank"><img src="images/youtube.svg" alt="YouTube"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/instagram/ -->
+      <a href="https://www.instagram.com/montquelabrise/" target="_blank"><img src="images/instagram.svg" alt="Instagram"  width="20" height="20"></a>
+    </p>
+
+  </footer>
+
+</body>
+</html>

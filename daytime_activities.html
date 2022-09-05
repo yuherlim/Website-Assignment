@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+      Purpose: This web page will provide detailed information about the daytime activities.
+      
+      Author: Lim Yu Her 
+
+      Filename: daytime_activities.html
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daytime Activities</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/daytime_styles.css" rel="stylesheet">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/playpause.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="home.html"><img src="images/resort_logo.png" alt="logo" class="logoimg" width="1600" height="900"></a>
+
+  </header>
+
+  <!-- nav is given id hiking in here is to avoid the sticky navbar from covering the content of hiking section when user choose to see more details about hiking. -->
+  <nav id="hiking" class="topnav">
+    
+    <li class="nav-button">
+      <a id="navicon" href="javascript:void(0)" onclick="navButton()"><img src="images/navicon.png" alt="navigation icon"></a>
+      <!-- This is the main navigation -->
+      <ul id="submenu" class="normal">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="camping_site.html">Camping</a></li>
+        <li><a href="#">Transportation</a></li>
+        <li><a href="outdoor_events.html" class="active">Outdoor Events</a></li>
+        <li><a href="courage_events.html">Tests Of Courage</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html" >Feedback</a></li>
+      </ul>
+    </li>
+
+    <!-- These navigation buttons are only displayed in small screen sizes -->
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/house-fill/ -->
+    <a href="home.html" id="home" title="Home"><img src="images/home_icon.svg" alt="Home" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/journal-plus/ -->
+    <a href="reservations.html" id="reservations" title="Reservations"><img src="images/reservations_icon.svg" alt="Reservations" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://freesvg.org/restaurant-sign-vector-image9339 -->
+    <a href="catering.html" id="catering" title="Catering"><img src="images/catering_icon.svg" alt="Catering" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/telephone-plus-fill/ -->
+    <a href="feedback.html" id="feedback" title="Contact Us"><img src="images/feedback_icon.svg" alt="Contact Us" title="Contact Us" width="30" height="30"></a>
+
+  </nav>
+
+  <!-- play/pause button -->
+  <div class="row">
+    <!-- back button -->
+    <!-- svg file from link: https://icons.getbootstrap.com/icons/arrow-left/ -->
+    <a href="outdoor_events.html" class="previous"><img src="images/arrow-left.svg" alt="Back" width="25" height="30"></a>
+    <button class="playpause" onclick="playPause()">
+      <div class="playpausebtn">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/pause-fill/ -->
+        <img class="pause-btn" src="images/pause-fill.svg" alt="Back" width="30" height="40">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/play-fill/ -->
+        <img class="play-btn" src="images/play-fill.svg" alt="Back" width="30" height="40">
+        <p id="music">Music</p>
+      </div>
+      <audio id="audio1" loop>
+        <source src="audio/test.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+    </button>
+  </div>
+
+  <div class="row">
+
+    <article class="card intro">
+
+      <h1>Daytime Activities</h1>
+
+    </article>
+
+  </div>
+
+  <div class="row">
+
+    <section class="card clearfix">
+
+      <article class="hiking">
+
+        <h2>Hiking</h2>
+        
+        <div class="container">
+          <!-- photo from unsplash url: https://unsplash.com/photos/xOigCUcFdA8 -->
+          <img src="images/hiking.jpg" alt="People hiking with the sun rising in the background" width="1600" height="900">
+          <div class="desc">Hover over the image to expand it!</div>
+
+          <!-- mobile version -->
+          <div class="mobiledesc">Tap on the image to expand it!</div>
+        </div>
+
+        <p>Want to enjoy the mountain breeze and the morning fresh air? Join our morning hiking activity!
+        Here you can hike safely with our professional guide that will lead you through the safest path to the peak of the mountain.
+        Throughout the hike, you can enjoy the forest’s ambient noises and nature’s ambience.</p>
+
+        <!-- This p is given id atv in here is to avoid the sticky navbar from covering the content of atv section when user choose to see more details about atv. -->
+        <p id="atv">Once you reach the peak, you will be able to see the wonderful sunrise and gaze at the amazing view. 
+        You are also given 15 to 20 minutes to enjoy the atmosphere and the view at the top of the mountain. While at the peak, 
+        you can opt to have a quick snack that will be provided by our staff. You can choose between our specially prepared 
+        tuna sandwiches or egg mayo sandwiches that are ideal for a quick snack.</p>
+
+      </article>
+
+    </section>
+
+  </div>
+
+  <div class="row">
+
+    <section class="card clearfix">
+
+      <article class="atv">
+
+        <h2>ATV</h2>
+
+        <div class="container">
+          <!-- photo from unsplash, url: https://unsplash.com/photos/V-shjVYbphI -->
+          <img src="images/atv.jpg" alt="Two people riding an ATV" width="1600" height="900">
+          <div class="desc">Hover over the image to expand it!</div>
+
+          <!-- mobile version -->
+          <div class="mobiledesc">Tap on the image to expand it!</div>
+        </div>
+
+        <aside>
+
+          <p><strong>Note</strong>: Please be aware that only children ages 16 and above are allowed to participate 
+          in this activity due to <strong>safety concerns</strong>. Thank you for your understanding.</p>
+
+        </aside>
+
+        <p>Don’t feel like hiking? Want to enjoy a thrilling experience? Join our <em>Off-Road Madness ATV ride</em>! Sounds crazy right? 
+        Don’t worry it is completely safe as there will be a designated track for you to drive through that provides you with
+        the most fun and exciting experience while also prioritizing your safety. Furthermore, we have set safety rules and our staff
+        will always ensure that you have passed all our safety checks before allowing you to start your ATV ride adventure. Helmets, riding 
+        jackets and pants are provided to ensure that you are well-protected and prepared for the muddy conditions!</p>
+
+        <p>Be sure to come prepared with clothes that you can move around in because, trust me, you’ll need that extra mobility when riding the ATV. Also, you are reminded
+        to bring a fresh pair of clothes to change into because things can get really sweaty after the atv ride. If you just so happen to forget bringing a change of clothes, no worries, 
+        as you can opt to rent clothes instead from our booth. The clothes will be automatically collected by our staff at your rooms the next day once you are done using it.</p>
+
+      </article>
+
+    </section>
+
+  </div>
+
+  <footer>
+
+    <h2>copyright &#169 <span style="font-variant: normal">Mont’que laBrise Mountain Resort</span></h2>
+    <p>Location : Titiwangsa Mountains,Malaysia</p>
+    <p>email : &#9993; <a href="mailto:montquelabrise@gmail.com" id="email">montquelabrise@gmail.com</a></p>
+    <p>Phone: &#128383; <a href="tel:+60322354488">+603 2235 4488</a></p>
+    <p><a href="feedback.html">Contact Us</a><span> || </span><a href="policy.html">Privacy Policy</a> </p>
+    <p class="icon">
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/facebook/ -->
+      <a href="https://www.facebook.com/montquelabrise" target="_blank"><img src="images/facebook.svg" alt="Facebook"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/twitter/ -->
+      <a href="https://twitter.com/montquelabrise" target="_blank"><img src="images/twitter.svg" alt="Twitter"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/youtube/ -->
+      <a href="https://www.youtube.com/montquelabrise" target="_blank"><img src="images/youtube.svg" alt="YouTube"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/instagram/ -->
+      <a href="https://www.instagram.com/montquelabrise/" target="_blank"><img src="images/instagram.svg" alt="Instagram"  width="20" height="20"></a>
+    </p>
+
+  </footer>
+
+</body>
+</html>

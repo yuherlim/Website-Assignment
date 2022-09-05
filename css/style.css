@@ -1,0 +1,291 @@
+/*
+  Purpose: the general styles for every web page.
+  
+  Filename: style.css
+*/
+
+
+/* from google fonts: https://fonts.google.com/specimen/Unna?query=Unna&category=Serif */
+@font-face {
+  font-family: 'Unna';
+  src: url("../fonts/Unna-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url("../fonts/Unna-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url("../fonts/Unna-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+/* from google fonts: https://fonts.google.com/specimen/Playfair+Display?query=playfair#standard-styles */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  background-image: url('../images/backgroundPhoto.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Unna', 'Times New Roman', Times, serif;
+}
+
+body {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0.625em;
+  font-size: 1.1em;
+  filter: drop-shadow(0em 0em 2em grey);
+}
+
+/* Header img styles */
+.logoimg {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+
+/* Style the top navigation bar */
+nav {
+  background-color:rgba(97, 97, 97, 0.95)
+}
+
+.topnav {
+  list-style-type: none;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: White;
+  text-align: center;
+  padding: 1em 1%;
+  text-decoration: none;
+  width: 20%;
+  border: 1px dotted rgba(255, 255, 255, 0.6);
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(232,234,230);
+  color: rgb(100, 97, 97);
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.topnav a.active {
+  background-color: rgb(232,234,230);
+  color: rgb(100, 97, 97);
+  font-weight: bold;
+}
+
+/* do not display navicon at first */
+a#navicon,
+a#home,
+a#reservations,
+a#catering,
+a#feedback {
+  display: none;
+}
+
+
+/* button for play pause of music*/
+button.playpause {
+  display: block;
+  float: right;
+  padding: .5em .8em;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: rgba(246, 247, 212, 0.6);
+  transition: .5s ease;
+}
+
+button.playpause img {
+  margin: auto;
+  float: left;
+}
+
+button.playpause img.play-btn {
+  display: block;
+}
+
+#music {
+  display: block;
+  float: left;
+  padding: 0.7rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+button.playpause:hover {
+  background-color: rgba(252, 255, 153, 0.6);
+  transform: scale(1.2, 1.2);
+}
+
+img.pause-btn {
+  display: none;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 1em;
+}
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: rgba(246, 247, 212, 0.8);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Footer */
+footer {
+  padding: 1em;
+  text-align: center;
+  /* background-color: rgb(246, 247, 212); */
+  background-color: rgba(246, 247, 212, 0.6);
+  margin-top: 1em;
+  font-variant: small-caps;
+  /* color: rgb(246, 247, 212); */
+  color: rgb(0, 0, 0);
+  line-height: 2;
+}
+
+footer a#email {
+  font-variant: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: Black;
+  transition: .2s ease-in-out;
+}
+
+footer a:visited, footer a:hover {
+  color: rgb(82, 57, 57);
+}
+
+footer p.icon {
+  margin-top: 0.5rem;
+}
+footer p.icon a:not(:last-of-type){
+  margin-right: 1rem;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* slightly decrease the font-size of the navbar */
+  .topnav a {
+    font-size: 0.9em;
+  }
+
+}
+
+/* Responsive layout - when the screen is less than 750px wide, this includes mobile layout which is less than 400px wide.
+*/
+@media screen and (max-width: 750px) {
+
+  /* make the navigation links stack on top of each other instead of next to each other */
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+
+  /* These code is for the navigation bar at this screen size. */
+  a#navicon {
+    display: block;
+  }
+
+  li.nav-button,
+  a#home,
+  a#reservations,
+  a#catering,
+  a#feedback {
+    display: block;
+    width: 20%;
+    float: left;
+  }
+
+  .topnav::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .normal {
+    display: none
+  }
+
+  .responsive {
+    display: block;
+    width: 500%;
+  }
+
+}
+
+
+  /* a#navicon:hover+ul, nav.topnav ul:hover {
+    display: block;
+    width: 500%;
+  } */

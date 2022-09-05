@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+      Purpose: This web page will provide detailed information about the nighttime activities.
+      
+      Author: Lim Yu Her 
+
+      Filename: nighttime_activities.html
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nighttime Activities</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/nighttime_styles.css" rel="stylesheet">
+  <script src="js/navbar.js" defer></script>
+  <script src="js/playpause.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="home.html"><img src="images/resort_logo.png" alt="logo" class="logoimg" width="1600" height="900"></a>
+
+  </header>
+
+  <!-- nav is given id trekking in here to avoid the sticky navbar from covering the content of night jungle trekking section when user choose to see more details about night jungle trekking. -->
+  <nav id="trekking" class="topnav">
+    
+    <li class="nav-button">
+      <a id="navicon" href="javascript:void(0)" onclick="navButton()"><img src="images/navicon.png" alt="navigation icon"></a>
+      <!-- This is the main navigation -->
+      <ul id="submenu" class="normal">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="camping_site.html">Camping</a></li>
+        <li><a href="#">Transportation</a></li>
+        <li><a href="outdoor_events.html" class="active">Outdoor Events</a></li>
+        <li><a href="courage_events.html">Tests Of Courage</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html" >Feedback</a></li>
+      </ul>
+    </li>
+
+    <!-- These navigation buttons are only displayed in small screen sizes -->
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/house-fill/ -->
+    <a href="home.html" id="home" title="Home"><img src="images/home_icon.svg" alt="Home" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/journal-plus/ -->
+    <a href="reservations.html" id="reservations" title="Reservations"><img src="images/reservations_icon.svg" alt="Reservations" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://freesvg.org/restaurant-sign-vector-image9339 -->
+    <a href="catering.html" id="catering" title="Catering"><img src="images/catering_icon.svg" alt="Catering" width="30" height="30"></a>
+
+    <!-- svg file from this link: https://icons.getbootstrap.com/icons/telephone-plus-fill/ -->
+    <a href="feedback.html" id="feedback" title="Contact Us"><img src="images/feedback_icon.svg" alt="Contact Us" title="Contact Us" width="30" height="30"></a>
+
+  </nav>
+
+  <!-- play/pause button -->
+  <div class="row">
+    <!-- back button -->
+    <!-- svg file from link: https://icons.getbootstrap.com/icons/arrow-left/ -->
+    <a href="outdoor_events.html" class="previous"><img src="images/arrow-left.svg" alt="Back" width="25" height="30"></a>
+    <button class="playpause" onclick="playPause()">
+      <div class="playpausebtn">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/pause-fill/ -->
+        <img class="pause-btn" src="images/pause-fill.svg" alt="Back" width="30" height="40">
+        <!-- svg file from link: https://icons.getbootstrap.com/icons/play-fill/ -->
+        <img class="play-btn" src="images/play-fill.svg" alt="Back" width="30" height="40">
+        <p id="music">Music</p>
+      </div>
+      <audio id="audio1" loop>
+        <source src="audio/test.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+    </button>
+  </div>
+
+  <div class="row">
+
+    <article class="card intro">
+
+      <h1>Nighttime Activities</h1>
+
+    </article>
+
+  </div>
+
+  <div class="row">
+
+    <section class="card clearfix">
+
+      <article class="trekking">
+
+        <h2>Night Jungle Trekking</h2>
+        
+        <div class="container">
+          <!-- photo from unsplash, edited, url: https://unsplash.com/photos/UjxL9x0nwQ8 -->
+          <img src="images/trekking.jpg" alt="A group of people going on Night Jungle Trekking" width="1600" height="900">
+          <div class="desc">Hover over the image to expand it!</div>
+          
+          <!-- mobile version -->
+          <div class="mobiledesc">Tap on the image to expand it!</div>
+        </div>
+
+        <aside>
+
+          <p><strong>Note</strong>: Please be aware that <strong>children ages 13 to 17 require parental guidance</strong> if they were to 
+          participate in this activity. <strong>Children below ages 13 are not allowed</strong> to participate in this activity. 
+          These rules are put in place to ensure the safety of the night jungle trekking experience. Thank you for your understanding.</p>
+
+        </aside>
+
+        <p>Want to experience nature at night? Join our Night Jungle Trekking! In this activity, we will trek through the jungle 
+        in search of wildlife such as mouse deers, owls, snakes and different kinds of exotic insects. Some of the insects you 
+        find might even be insects that glow in the dark. If you are lucky, you might even be able to encounter big wildlife such 
+        as wild boars! During the night trekking, you will also hear many amusing noises that are produced by insects that only 
+        come out at night. In combination with the river flow noises, you will be able to listen to a melody that is only unique 
+        to this jungle!</p>
+
+        <p>Now you might be wondering, isn’t that dangerous? Well fear not, as we have multiple jungle trekking experts 
+        that are also experienced hunters that can share their expertises regarding the animals as well as ensure your safety. 
+        To ensure that they are able to protect you well, you will be separated into groups of 4 to 5 people.</p>
+        
+        <!-- FOR JIA QING!!! (DELETE THIS LINE AFTER) This paragraph got link that brings you to the reservations.html to make a booking. -->
+        <!-- This p is given id firefly here to avoid the sticky navbar from covering the content of firefly viewing section when user choose to see more details about firefly viewing. -->
+        <p id="firefly">As spaces are limited, you are encouraged to book in advance at our reception counter or through 
+        this <a href="reservations.html">link</a> to ensure that you don’t miss out on this exciting opportunity.</p>
+
+      </article>
+
+    </section>
+
+  </div>
+
+  <div class="row">
+
+    <section class="card clearfix">
+
+      <article class="firefly">
+
+        <h2>Firefly Viewing</h2>
+
+        <div class="container">
+          <!-- photo from unsplash, url: https://unsplash.com/photos/lH40asdVljs -->
+          <img src="images/firefly.jpg" alt="A view of fireflies" width="1600" height="900">
+          <div class="desc">Hover over the image to expand it!</div>
+
+          <!-- mobile version -->
+          <div class="mobiledesc">Tap on the image to expand it!</div>
+        </div>
+
+        <p>Want a chilling experience for the night? Join our Firefly Viewing session! Contrary to popular belief, 
+        firefly sightings are actually possible all year round in Malaysia! This activity 
+        is for you if you want to enjoy a relaxing night soaking in the atmosphere and view of the 
+        beautiful night jungle near our resort. You will be guided by our professional jungle trekking experts 
+        that will bring you to our firefly viewing destination through the safest route available. Worry not, 
+        as it is only a 15 minute walk to the firefly viewing area.</p>
+
+        <p>At the viewing spot, there will be an open spot where you can remain in while taking in the 
+        beautiful view of the clear sky combined with the breathtaking view of the fireflies. There will 
+        also be professional photographers on the scene where you can request for a 
+        high-quality picture to be taken under the night sky surrounded by fireflies. These pictures 
+        will be available to you once you return to the resort for a small fee of RM5 per picture!</p>
+
+      </article>
+
+    </section>
+
+  </div>
+
+  <footer>
+
+    <h2>copyright &#169 <span style="font-variant: normal">Mont’que laBrise Mountain Resort</span></h2>
+    <p>Location : Titiwangsa Mountains,Malaysia</p>
+    <p>email : &#9993; <a href="mailto:montquelabrise@gmail.com" id="email">montquelabrise@gmail.com</a></p>
+    <p>Phone: &#128383; <a href="tel:+60322354488">+603 2235 4488</a></p>
+    <p><a href="feedback.html">Contact Us</a><span> || </span><a href="policy.html">Privacy Policy</a> </p>
+    <p class="icon">
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/facebook/ -->
+      <a href="https://www.facebook.com/montquelabrise" target="_blank"><img src="images/facebook.svg" alt="Facebook"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/twitter/ -->
+      <a href="https://twitter.com/montquelabrise" target="_blank"><img src="images/twitter.svg" alt="Twitter"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/youtube/ -->
+      <a href="https://www.youtube.com/montquelabrise" target="_blank"><img src="images/youtube.svg" alt="YouTube"  width="20" height="20"></a>
+      <!-- svg file from this link: https://icons.getbootstrap.com/icons/instagram/ -->
+      <a href="https://www.instagram.com/montquelabrise/" target="_blank"><img src="images/instagram.svg" alt="Instagram"  width="20" height="20"></a>
+    </p>
+
+  </footer>
+</body>
+</html>
